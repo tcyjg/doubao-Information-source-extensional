@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "豆包参考来源统计",
+  "version": "1.7.0",
+  "description": "统计豆包回答中参考资料的网站来源数量，自动持久化并备份为 JSON 文件。",
+  "permissions": ["storage", "downloads", "activeTab"],
+  "host_permissions": ["https://www.doubao.com/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{
+    "matches": ["https://www.doubao.com/*"],
+    "js": ["content-v2.js"],
+    "run_at": "document_idle"
+  }],
+  "action": {
+    "default_title": "豆包参考来源统计",
+    "default_popup": "popup.html"
+  }
+}

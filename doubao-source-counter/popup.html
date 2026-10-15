@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>豆包参考来源统计</title><link rel="stylesheet" href="popup.css"><link rel="stylesheet" href="popup-extra.css"></head>
+<body>
+  <header><div><h1>参考来源统计</h1><p id="summary">正在读取…</p></div><span class="dot"></span></header>
+  <section class="cards">
+    <div><strong id="refCount">0</strong><span>参考资料</span></div>
+    <div><strong id="siteCount">0</strong><span>来源网站</span></div>
+    <div><strong id="answerCount">0</strong><span>回答数量</span></div>
+  </section>
+  <main>
+    <div id="empty" hidden>还没有记录，请点击“扫描”。</div>
+    <div id="result">
+      <h2>网站排行</h2>
+      <table id="table"><thead><tr><th>网站</th><th>数量</th></tr></thead><tbody></tbody></table>
+      <div class="recent-wrap"><h2>最近识别</h2><div id="recent"></div></div>
+    </div>
+  </main>
+  <footer>
+    <button id="scan" class="primary">扫描</button>
+    <button id="csv">导出 CSV</button><button id="json">导出 JSON</button>
+    <button id="clear" class="danger">清空</button>
+  </footer>
+  <p class="note">每次扫描都会清空旧结果，重新统计当前聊天窗口中已有的参考资料，并在完成后自动结束。</p>
+  <script src="popup.js"></script>
+</body></html>
